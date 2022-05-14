@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+body {
+	font-family: 'Roboto Slab', serif;
+	background-color: #DFCBAB;
+}
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.blur {
+	position: absolute;
+	inset: 0;
+	backdrop-filter: blur(1px) brightness(85%);
+	z-index: 2;
+}
+
+.top {
+	z-index: 1;
+	position: relative;
+	background: url(https://www.mybakingaddiction.com/wp-content/uploads/2011/10/lr-0953.jpg) 50% 50% / cover no-repeat;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	& * {
+		z-index: 3;
+	}
+	.logo {
+		width: 10vw;
+	}
+	.title {
+		color: #fff;
+		font-size: 6.5vw;
+		letter-spacing: 10px;
+		-webkit-text-stroke: 2px #A6A49F;
+	}
+	.small-title {
+		color: #fff;
+		font-size: 4vw;
+		letter-spacing: 5px;	
+		-webkit-text-stroke: 2px #A6A49F;
+	}
+	@media screen and (max-width: 950px) {
+		.logo {
+			width: 20vw;
+		}
+		.title {
+			font-size: 8vw;
+		}
+		.small-title {
+			font-size: 5.5vw;
+		}
+	}
+	@media screen and (max-width: 700px) {
+		.logo {
+			width: 33vw;
+		}
+		.title {
+			margin-top: 30px;
+			font-size: 4em;
+			-webkit-text-stroke: 1px #A6A49F;
+		}
+		.small-title {
+			font-size: 2em;
+			-webkit-text-stroke: 1px #A6A49F;
+		}
+	}
+}
+
+section {
+	max-width: 1200px;
+	margin: 70px auto 20px;
+}
+.title {
+	text-transform: capitalize;
+	margin: 0 auto 20px;
+	font-size: 2.5em;
+	max-width: 70%;
+	text-align: center;
+	@media (max-width: 400px) {
+		font-size: 2em;
+		max-width: 85%;
+	}
+}
+.text {
+	margin: 0 auto 20px;
+	max-width: 60%;
+	text-align: center;
+	font-size: 1.5em;
+	font-style: italic;
+	@media (max-width: 400px) {
+		font-size: 1.2em;
+		max-width: 80%;
+	}
+}
+
+.cake-part {
+	width: 90%;
+	margin: 70px auto 20px;
+	display: flex;
+	.simple {
+		font-size: 1.4em;
+	}
+	.cake1 {
+		height: 600px;
+	}
+	.cake2 {
+		width: 100%;
+		height: 300px;
+	}
+	@media (max-width: 1100px) {
+		flex-direction: column;
+		align-items: center;
+		& .cake1 {
+			align-self: center;
+			width: 70%;
+			height: 800px;
+		}
+		.simple {
+			max-width: 90%;
+			margin: 30px 0;
+		}
+		& .cake2 {
+			width: 90%;
+		}
+	}
+	@media (max-width: 700px) {
+		.column {
+			align-items: center;
+			margin-left: 0;
+		}
+		& .cake1 {
+			align-self: center;
+			width: 90%;
+		}
+		.simple {
+			text-align: justify;
+		}
+	}
+	@media (max-width: 460px) {
+		& .cake1 {
+			width: 100%;
+			height: 600px;
+		}
+		.cake2 {
+			width: 100%;
+		}
+	}
+}
+.column {
+	margin-left: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.menu {
+	min-height: 700px;
+	margin-top: 100px;
+	width: 100%;
+	display: flex;
+	.menu-img {
+		background: url('../img/food(3).jpg') 50% 50% / cover no-repeat;
+		width: 30%;
+		min-width: 30%;
+		&.img2 {
+			background: url('../img/food(4).jpg') 50% 50% / cover no-repeat;
+		}
+		&.img3 {
+			background: url('../img/food(7).jpg') 50% 50% / cover no-repeat;
+		}
+		&.img4 {
+			background: url('../img/food(8).jpg') 50% 50% / cover no-repeat;
+		}
+	}
+	.menu-div {
+		background-color: #fff;
+		min-width: 35%;
+		padding: 130px 20px; 
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.text {
+			font-size: 1.5em;
+			max-width: 90%;
+		}
+		.date {
+			color: #9F9CB8;
+			font-style: italic;
+			font-size: 1.2em;
+			margin-bottom: 20px;
+		}
+	}
+	@media (max-width: 850px) {
+		flex-direction: column;
+		& > .menu-img {
+			width: 100%;
+			height: 400px;
+		}
+	}
+	@media (max-width: 500px) {
+		.menu-div {
+			padding: 80px 10px;
+		}
+	}
+}
+
+.btn {
+	background-color: #DFCBAB;
+	width: 150px;
+	height: 50px;
+	font-size: 1.3em;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&:hover {
+		background-color: #D8A771;
+		color: #fff;
+	}
+}
+		
+// ===================== Coffee
+.coffee-bg {
+	& * {
+		z-index: 3;
+	}
+	position: relative;
+	margin-top: 50px;
+	width: 100%;
+	height: 750px;
+	background: url('/img/coffee-bg.jpg') 50% 50% / cover no-repeat;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	.coffee-container {
+		color: #fff;
+		max-width: 1000px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		& > p {
+			margin: 10px 0 20px;
+			text-align: left;
+		}
+	}
+	@media (max-width: 800px) {
+		.coffee-container {
+			max-width: 90%;
+			.text {
+				max-width: 90%;
+			}
+		}
+	}
+	@media (max-width: 600px) {
+		.coffee-container .text {
+			font-size: 1.4em;
+			max-width: 100%;
+		}
+	}
+	@media (max-width: 450px) {
+		.coffee-container {
+			.text {
+				font-size: 1.2em;
+			}
+			.title {
+				font-size: 2em;
+			}
+		}
+	}
+}
+
+.part2 {
+	.column {
+		margin-left: 50px;
+		width: 50%;
+		align-items: center;
+		.simple {
+			max-width: 90%;
+			font-size: 1.5em;
+			margin-top: 10px;
+		}
+	}
+	.cake1 {
+		height: 500px;
+	}
+	.cake2 {
+		height: 350px;
+	}
+	@media (max-width: 1100px) {
+		.column {
+			width: 100%;
+			flex-direction: row;
+			margin-left: 0;
+			margin-top: 10px;
+			align-items: flex-start;
+			.cake2 {
+				height: 100%;
+				margin-left: 10px;
+			}
+			.cake1 {
+				margin-right: 10px;
+			}
+		}
+	}
+	@media (max-width: 945px) {
+		.column {
+			flex-direction: column;
+			align-items: center;
+			& img {
+				height: 500px;
+				width: 90%;
+			}
+			& .simple {
+				text-align: justify;
+			}
+			&:nth-child(2) {
+				.simple {
+					order: 2;
+				}
+				img {
+					order: 1;
+				}
+			}
+		}
+	}
+	@media (max-width: 450px) {
+		.column img {
+			width: 100%;
+			height: 300px;
+		}
+	}
+}
+
+.contact {
+	.menu-div {
+		min-width: 40%;
+	}
+	.menu-div .date {
+		margin-bottom: 5px;
+	}
+	a.date {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.menu-list {
+		margin-top: 20px;
+		list-style: none;
+		li {
+			text-align: center;
+			font-style: italic;
+			font-size: 1.5em;
+		}
+	} 
+	@media (max-width: 970px) {
+		.menu-list li {
+			font-size: 1.3em;
+		}
+	}
+	@media (max-width: 850px) {
+		.menu-div {
+			padding: 80px 10px;
+		}
+	}
+}
+
+footer {
+	width: 100%;
+	height: 90px;
+	background-color: #333333;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	.text {
+		font-size: 1.35em;
+		margin: 0;
+	}
+	span {
+		color: #DFCBAB;
+		font-style: normal;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	@media (max-width: 650px) {
+		font-size: 1em;
+	}
+}
