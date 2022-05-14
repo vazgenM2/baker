@@ -322,7 +322,7 @@ section {
   margin-top: 50px;
   width: 100%;
   height: 750px;
-  background: url("/img/coffee-bg.jpg") 50% 50%/cover no-repeat;
+  background: url("../img/coffee-bg.jpg") 50% 50%/cover no-repeat;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
