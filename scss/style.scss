@@ -21,7 +21,7 @@ body {
 .blur {
 	position: absolute;
 	inset: 0;
-	backdrop-filter: blur(1px) brightness(85%);
+	backdrop-filter: blur(3px) brightness(85%);
 	z-index: 2;
 }
 
